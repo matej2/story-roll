@@ -14,8 +14,14 @@
             <div class="carousel-item active">
                 <img class="d-block w-100" src="https://placeimg.com/1080/500/animals" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>My Caption Title (1st Image)</h5>
-                    {{ content }}
+                  <h5>{{ site.title }}</h5>
+                  <p>{{ site.description | truncate: 100 }}</p>
+                  <p>{{ content }}</p>
+                  <p>
+                    <a href="/about" class="btn btn-light">About</a>
+                    <a href="#" class="btn btn-light">Projects</a>
+                    <a href="#" class="btn btn-light">Contact</a>
+                  </p>
                 </div>
             </div>
             {% for post in site.posts %}
@@ -23,7 +29,7 @@
                 <img class="d-block w-100" src="https://placeimg.com/1080/500/arch" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>{{ post.title }}</h5>
-                  <p>{{ post.excerpt }}</p>
+                  <p>{{ post.excerpt | truncate: 156  }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -40,5 +46,10 @@
     
     {% include footer.html %}
 
+    <script>
+      $('.carousel').carousel({
+        interval: 1000 * 15
+      });
+    </script>
   </body>
 </html>

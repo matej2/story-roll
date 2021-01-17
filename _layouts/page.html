@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include header.html %}
+</head>
+<body>
+        
+
+    <div class="container animate__animated animate__fadeInDown">
+        <div class="row">
+            <div class="col text-center">
+                <h1><a href="/"><i class="bi bi-caret-up-fill"></i></a></h1>
+                <small>Click arrow to go back</small>
+            </div>
+        </div>
+        
+
+        <h2>{{ page.title }}</h2>
+        {{ content }}
+    </div>
+</body>
+</html>
