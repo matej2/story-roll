@@ -3,20 +3,22 @@
 <head>
     {% include header.html %}
 </head>
-<body>
+<body class="bg-secondary">
         
 
-    <div class="container animate__animated animate__fadeInDown">
+    <div class="container animate__animated animate__fadeInDownBig">
         <div class="row">
-            <div class="col text-center">
+            <div class="col-md-6 text-center mx-auto bg-light">
                 <h1><a href="/"><i class="bi bi-caret-up-fill"></i></a></h1>
                 <small>Click arrow to go back</small>
+
+                <h2 class="my-4">{{ page.title }}</h2>
+                {{ content }}
             </div>
         </div>
         
 
-        <h2>{{ page.title }}</h2>
-        {{ content }}
+
     </div>
 </body>
 </html>

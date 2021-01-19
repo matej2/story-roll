@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
   {% include header.html title=site.title %}
-  <body>
+  <body class="min-vh-100 bg-secondary">
 
-    <div class="container animate__animated animate__zoomIn">
+    <div class="container animate__animated animate__zoomIn mh-100">
       <div class="row text-center">
-        <div class="col-md-8 mx-auto">
-          <div id="carouselExampleIndicators" class="carousel slide bg-secondary" data-ride="carousel" style="height:500px;" >
+        <div class="col-md-6 mx-auto my-auto">
+          <div id="carouselExampleIndicators" class="carousel slide bg-secondary" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -14,21 +14,21 @@
             </ol>
             <div class="carousel-inner h-100">
                 <div class="carousel-item h-100 active">
-                    <img class="d-block w-100" src="https://placeimg.com/1080/500/animals" alt="First slide">
+                    <img class="d-block w-100" src="https://g2.img-dpreview.com/DB98322612CD4259830FEC9067CB8E89.jpg" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>{{ site.title }}</h5>
                       <p>{{ site.description | truncate: 100 }}</p>
                       <p>{{ content }}</p>
                       <p>
-                        <a href="/about" class="btn btn-light">About</a>
-                        <a href="/projects" class="btn btn-light">Projects</a>
-                        <a href="#" class="btn btn-light">Contact</a>
+                        <a href="/about" class="btn btn-light m-1">About</a>
+                        <a href="/projects" class="btn btn-light m-1">Projects</a>
+                        <a href="#" class="btn btn-light m-1">Contact</a>
                       </p>
                     </div>
                 </div>
                 {% for post in site.posts %}
                 <div class="carousel-item h-100">
-                    <img class="d-block w-100" src="https://placeimg.com/1080/500/arch" alt="Second slide">
+                    <img class="d-block w-100" src="https://g2.img-dpreview.com/C7E98764B33A491FB5130BBDBB17E78C.jpg" alt="Second slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>{{ post.title }}</h5>
                       <p>{{ post.excerpt | truncate: 156  }}</p>
@@ -55,7 +55,7 @@
 
     <script>
       $('.carousel').carousel({
-        interval: 1000 * 15
+        interval: 1000 * 3
       });
     </script>
   </body>
